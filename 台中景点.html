@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>台中熱門景點介紹</title>
+
+<style>
+    body {
+        font-family: "Noto Sans TC", sans-serif;
+        margin: 0;
+        background: #f4f4f4;
+        color: #333;
+    }
+
+    header {
+        background: linear-gradient(135deg, #5bbad5, #4e8ccf);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
+
+    /* --- CSS TABS --- */
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tabs label {
+        cursor: pointer;
+        padding: 1rem 1.5rem;
+        background: #ddd;
+        margin-right: 5px;
+        border-radius: 5px 5px 0 0;
+        transition: 0.3s;
+    }
+
+    .tabs label:hover {
+        background: #ccc;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .tab-content {
+        width: 100%;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 0 5px 5px 5px;
+        display: none;
+        line-height: 1.7;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    input:checked + label {
+        background: #5bbad5;
+        color: white;
+        font-weight: bold;
+    }
+
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4,
+    #tab5:checked ~ #content5 {
+        display: block;
+    }
+
+    iframe {
+        border: none;
+        width: 100%;
+        height: 600px;
+        margin-top: 2rem;
+        border-radius: 10px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>台中熱門景點介紹</h1>
+    <p>互動式介紹頁面</p>
+</header>
+
+<div class="container">
+
+    <!-- Tabs 選單 -->
+    <div class="tabs">
+        <input type="radio" name="tabs" id="tab1" checked>
+        <label for="tab1">國立臺灣美術館</label>
+
+        <input type="radio" name="tabs" id="tab2">
+        <label for="tab2">道禾六藝文化館</label>
+
+        <input type="radio" name="tabs" id="tab3">
+        <label for="tab3">國家漫畫博物館</label>
+
+        <input type="radio" name="tabs" id="tab4">
+        <label for="tab4">臺中綠美圖</label>
+
+        <input type="radio" name="tabs" id="tab5">
+        <label for="tab5">分子藥局</label>
+
+        <!-- Content -->
+        <div id="content1" class="tab-content">
+            <h2>國立臺灣美術館</h2>
+            <p>
+                臺灣唯一的國家級美術館，擁有大型室內展廳與開放式雕塑公園。
+                展覽包含當代藝術、多媒體影像與兒童美育，是全齡皆宜的文化休憩地點。
+            </p>
+        </div>
+
+        <div id="content2" class="tab-content">
+            <h2>道禾六藝文化館</h2>
+            <p>
+                由日治時期「台中刑務所演武場」改建而成的武道與文化場館。
+                能看到日式木造建築，也可體驗劍道、茶道或參觀假日市集，是結合歷史與文化的景點。
+            </p>
+        </div>
+
+        <div id="content3" class="tab-content">
+            <h2>國家漫畫博物館</h2>
+            <p>
+                正在活化老建築打造的漫畫文化園區。
+                以臺灣漫畫發展為核心，結合展覽、創作、歷史空間再利用，是台中新興文化亮點。
+            </p>
+        </div>
+
+        <div id="content4" class="tab-content">
+            <h2>臺中綠美圖</h2>
+            <p>
+                由普立茲克獎建築師團隊 SANAA 設計，結合美術館與圖書館的創新文化空間。
+                透明流動的建築融合綠地，適合閱讀、散步、欣賞藝術。
+            </p>
+        </div>
+
+        <div id="content5" class="tab-content">
+            <h2>分子藥局</h2>
+            <p>
+                以巴洛克風格呈現的獨特藥局，結合咖啡、設計與生活美學。
+                是台中最具特色、最受歡迎的打卡藥局之一。
+            </p>
+        </div>
+
+    </div>
+
+    <!-- StoryMap Iframe -->
+    <h2 style="margin-top:3rem;">台中景點 StoryMap</h2>
+    <iframe src="https://uploads.knightlab.com/storymapjs/15f51f11b5ffdbfa2915f470493dcc7e/tai-zhong-re-men-jing-dian/index.html"></iframe>
+    <content>
+        靜宜大學 黃葦倩製作
+    </content>
+</div>
+
+</body>
+</html>
